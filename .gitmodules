@@ -1,0 +1,3 @@
+[submodule "themes/alpenrosenfest-theme"]
+	path = themes/alpenrosenfest-theme
+	url = git@github.com:JanickLehmann/alpenrosenfest-theme.git
