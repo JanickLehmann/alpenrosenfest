@@ -1,20 +1,8 @@
-baseURL: https://example.org/
-languageCode: en-us
+languageCode: de-CH
+title: Alpenrosenfest
 disableKinds: ["rss", "taxonomy", "term"]
-title: My New Hugo Site
 theme: alpenrosenfest-theme
 copyright: Copyright © 2026 - Janick Lehmann
 params:
-  event:
-    name: Alpenrosenfest
-    date: 2026-06-07
-    map: "//umap.osm.ch/de/map/alpenrosenfest_12573?scrollWheelZoom=false"
-    sponsors:
-      - name: Kreisel Garage
-        category: Shuttle-Bus
-        logo: https://kreisel-garage.ch/wp-content/uploads/2022/10/logo-kreisel-garage-white.svg
-        url: https://kreisel-garage.ch/
-      - name: Kuratle Jaecker
-        category: Fest
-        logo: https://www.kuratlejaecker.ch/storage/cms/kuratlegroup/logo_and_favicons/kuratle-jaecker-logo.svg
-        url: https://www.kuratlejaecker.ch/
+  date: 2026-06-07
+  map: "//umap.osm.ch/de/map/alpenrosenfest_12573?scrollWheelZoom=false"
