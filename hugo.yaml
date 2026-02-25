@@ -1,8 +1,0 @@
-languageCode: de-CH
-title: Alpenrosenfest
-disableKinds: ["rss", "taxonomy", "term"]
-theme: alpenrosenfest-theme
-copyright: Copyright © 2026 - Janick Lehmann
-params:
-  date: 2026-06-07
-  map: "//umap.osm.ch/de/map/alpenrosenfest_12573?scrollWheelZoom=false"

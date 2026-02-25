@@ -1,0 +1,190 @@
+baseURL = "https://alpenrosenfest.ch/"
+languageCode = "de-CH"
+defaultContentLanguage = "de"
+title = "Alpenrosenfest"
+theme = "alpenrosenfest-theme"
+
+# ═══════════════════════════════════════
+# SITE PARAMETERS
+# ═══════════════════════════════════════
+
+[params]
+  description = "Ein Kulturfest rund um die Alpenrosen in Schneisingen."
+  date = 2026-06-07
+  footerTagline = "Design by Janick Lehmann."
+
+
+# ── Colors ──
+[params.colors]
+  accent = "#D96A7A"
+  secondary = "#5F7A4B"
+  background = "#F0E3C5"
+
+
+# ── Navigation ──
+# Each entry: label (display text), href (anchor link), cta (optional, highlight as button)
+[[params.nav]]
+  label = "Über das Fest"
+  href = "#ueber"
+[[params.nav]]
+  label = "Die Alpenrosen"
+  href = "#pflanze"
+[[params.nav]]
+  label = "Programm"
+  href = "#programm"
+[[params.nav]]
+  label = "Anfahrt"
+  href = "#anfahrt"
+[[params.nav]]
+  label = "Sponsoren"
+  href = "#sponsoren"
+
+
+# ── Hero Section ──
+[params.hero]
+  title = "Alpenrosenfest"
+  primaryButtonText = "Programm entdecken"
+  primaryButtonHref = "#programm"
+  secondaryButtonText = "Anfahrt & Ort"
+  secondaryButtonHref = "#anfahrt"
+  scrollHint = "Mehr erfahren"
+  # Carousel interval in milliseconds (0 = no auto-advance)
+  carouselInterval = 5000
+
+# Hero carousel images (at least one required)
+# src: path relative to /static, alt: accessibility text
+[[params.hero.images]]
+  src = "/images/alpenrosen-01.jpg"
+  alt = "Blühende Alpenrose im Wald"
+[[params.hero.images]]
+  src = "/images/alpenrosen-02.jpg"
+  alt = "Waldlichtung am Festplatz"
+[[params.hero.images]]
+  src = "/images/alpenrosen-03.jpg"
+  alt = "Besucher beim Alpenrosenfest"
+
+# ── About Section ──
+[params.about]
+  label = "Willkommen"
+  title = "Über das Fest"
+
+[[params.about.cards]]
+  icon = "flower"
+  title = "Botanische Rarität"
+  text = "Wir feiern das einzige natürliche Vorkommen der Rostblättrigen Alpenrose (<em>Rhododendron ferrugineum</em>) ausserhalb der Alpen - ein Relikt der letzten Eiszeit, das an diesem besonderen Standort bis heute überlebt hat."
+[[params.about.cards]]
+  icon = "house"
+  title = "Fest im Wald"
+  text = "Umgeben von Natur findet das Alpenrosenfest mitten im Wald statt. Der besondere Standort der Pflanze wird so zum Festplatz - Natur und Kultur verschmelzen zu einem einzigartigen Erlebnis."
+[[params.about.cards]]
+  icon = "sun"
+  title = "Für alle Generationen"
+  text = "Von fachkundigen Führungen über kulinarische Genüsse bis hin zu Spielen für die ganze Familie - das Alpenrosenfest bietet ein vielfältiges Programm, das Gross und Klein begeistert."
+
+# ── Plant Section ──
+[params.plant]
+  label = "Die Pflanze"
+  title = "Rostblaettrige Alpenrose"
+  commonName = "Rhododendron ferrugineum"
+  description = [
+    "Die Rostblättrige Alpenrose ist ein immergrüner Strauch aus der Familie der Heidekrautgewächse. Ihren Namen verdankt sie den rostbraunen Drüsenschuppen auf der Blattunterseite.",
+    "Normalerweise kommt sie in Höhenlagen zwischen 1.500 und 2.800 Metern in den Alpen vor. Umso bemerkenswerter ist es, dass sie an diesem Standort - weit ausserhalb ihres natürlichen Verbreitungsgebiets - als Eiszeitrelikt überlebt hat."
+  ]
+
+[[params.plant.facts]]
+  value = "Juni - Juli"
+  label = "Blütezeit"
+[[params.plant.facts]]
+  value = "20 - 100 cm"
+  label = "Wuchshöhe"
+[[params.plant.facts]]
+  value = "Geschützt"
+  label = "Schutzstatus"
+
+
+# ── schedule Section ──
+[params.schedule]
+  title = "Programm"
+  subtitle = "Ein Tag voller Natur, Kultur und Genuss im Wald"
+
+[[params.schedule.days]]
+  tabLabel = "Samstag"
+  id = "tag1"
+
+  [[params.schedule.days.events]]
+    time = "10:30"
+    title = "Ökumenischer Gottesdienst"
+    text = "Eröffnung des Alpenrosenfests mit einem ökumenischen Gottesdienst, musikalisch begleitet durch die Spielgemeinschaft Ehrendingen-Schneisingen."
+  [[params.schedule.days.events]]
+    time = "ab 11:30"
+    title = "Öffnung Festwirtschaft und Attraktionen"
+    text = "Betriebsbeginn der Festwirtschaft und der verschiedenen Attraktionen."
+  [[params.schedule.days.events]]
+    time = "11:30"
+    title = "Grenzenlos Böhmische"
+    text = "Regionale Spezialitäten und Getränke an der Waldschänke"
+  [[params.schedule.days.events]]
+    time = "17:00"
+    title = "Abschluss"
+    text = "Verabschiedung aller Gäste und Ausklang des Festes"
+
+
+# ── Highlights Section ──
+[params.highlights]
+  label = "Höhepunkte"
+  title = "Was dich erwartet"
+
+[[params.highlights.cards]]
+  icon = "music"
+  title = "Musikalisches Programm"
+  text = "Musikalische Darbietungen von verschiedenen Gruppen sorgen für eine festliche Stimmung."
+[[params.highlights.cards]]
+  icon = "catering"
+  title = "Festwirtschaft"
+  text = "Geniessen Sie frisch zubereitete Spezialitäten aus der Region - direkt im Wald serviert."
+[[params.highlights.cards]]
+  icon = "games"
+  title = "Attraktionen & Unterhaltung"
+  text = "Schiessbude, Kegelbahn und Glücksrad sorgen für ein kleines Vergnügen am Rande."
+
+
+# ── Location Section ──
+[params.location]
+  label = "So findest du zu uns"
+  title = "Anfahrt & Ort"
+  mapPlaceholderTitle = "Kartenansicht folgt"
+  mapPlaceholderText = "Genauer Standort wird bei der Anmeldung mitgeteilt"
+  map = "//umap.osm.ch/de/map/alpenrosenfest_12573?scrollWheelZoom=false"
+  # Edit link: https://umap.osm.ch/de/map/alpenrosenfest_12573
+
+[[params.location.details]]
+  icon = "pin"
+  title = "Veranstaltungsort"
+  text = "Im Schneisinger Bowald in der Waldlichtung bei den Alpenrosen."
+[[params.location.details]]
+  icon = "directions"
+  title = "Anreise"
+  text = "Am besten mit dem öffentlichen Verkehr: Postauto Linie 354 bis Haltestelle 'Schneisingen, Oberdorf'. Von dort ca. 20 Minuten Fussweg zum Festplatz."
+[[params.location.details]]
+  icon = "shuttle"
+  title = "Shuttle-Service"
+  text = "Vom Schulhaus Aemmert wird ein Shuttle-Service angeboten. Der Shuttle verkehrt von 10:00 bis 15:30 Uhr im 30-Minuten-Takt."
+[[params.location.details]]
+  icon = "parking"
+  title = "Parkplätze"
+  text = "Bei der Wasserversorgung und am Waldweg stehen eine begrenzte Anzahl an Parkplätzen zur Verfügung. Die letzten Meter müssen zu Fuss zurückgelegt werden."
+
+
+# ── Sponsors Section ──
+[params.sponsors]
+  label = "Unsere Unterstützer"
+  title = "Sponsoren"
+
+[[params.sponsors.items]]
+  name = "Kuratle Jaecker"
+  logo = "images/sponsors/kuratle-jaecker.png"
+  contribution = "Hauptsponsor"
+[[params.sponsors.items]]
+  name = "Kreisel Garage"
+  logo = "images/sponsors/kreisel-garage.png"
+  contribution = "Shuttle Bus"
