@@ -1,8 +1,15 @@
 baseURL = "https://alpenrosenfest.ch/"
 languageCode = "de-CH"
 defaultContentLanguage = "de"
-title = "Alpenrosenfest"
+copyright = "© Janick Lehmann"
+title = "Alpenrosenfest Schneisingen"
 theme = "alpenrosenfest-theme"
+disableKinds = ["taxonomy", "term", "rss"]
+enableRobotsTXT = true
+
+[sitemap]
+  changefreq = "weekly"
+  priority = -1
 
 # ═══════════════════════════════════════
 # SITE PARAMETERS
@@ -11,7 +18,8 @@ theme = "alpenrosenfest-theme"
 [params]
   description = "Ein Kulturfest rund um die Alpenrosen in Schneisingen."
   date = 2026-06-07
-  footerTagline = "Design by Janick Lehmann."
+  image = "images/alpenrosen-01.jpg"
+  footerTagline = "Build with ❤️"
 
 
 # ── Colors ──
@@ -66,7 +74,7 @@ theme = "alpenrosenfest-theme"
 # ── About Section ──
 [params.about]
   label = "Willkommen"
-  title = "Über das Fest"
+  title = "Das Fest"
 
 [[params.about.cards]]
   icon = "flower"
@@ -102,6 +110,25 @@ theme = "alpenrosenfest-theme"
   label = "Schutzstatus"
 
 
+# ── Highlights Section ──
+[params.highlights]
+  label = "Höhepunkte"
+  title = "Was dich erwartet"
+
+[[params.highlights.cards]]
+  icon = "music"
+  title = "Musikalisches Programm"
+  text = "Musikalische Darbietungen von verschiedenen Gruppen sorgen für eine festliche Stimmung."
+[[params.highlights.cards]]
+  icon = "catering"
+  title = "Festwirtschaft"
+  text = "Geniessen Sie frisch zubereitete Spezialitäten aus der Region - direkt im Wald serviert."
+[[params.highlights.cards]]
+  icon = "games"
+  title = "Attraktionen & Unterhaltung"
+  text = "Schiessbude, Kegelbahn und Glücksrad sorgen für ein kleines Vergnügen am Rande."
+
+
 # ── schedule Section ──
 [params.schedule]
   title = "Programm"
@@ -127,25 +154,6 @@ theme = "alpenrosenfest-theme"
     time = "17:00"
     title = "Abschluss"
     text = "Verabschiedung aller Gäste und Ausklang des Festes"
-
-
-# ── Highlights Section ──
-[params.highlights]
-  label = "Höhepunkte"
-  title = "Was dich erwartet"
-
-[[params.highlights.cards]]
-  icon = "music"
-  title = "Musikalisches Programm"
-  text = "Musikalische Darbietungen von verschiedenen Gruppen sorgen für eine festliche Stimmung."
-[[params.highlights.cards]]
-  icon = "catering"
-  title = "Festwirtschaft"
-  text = "Geniessen Sie frisch zubereitete Spezialitäten aus der Region - direkt im Wald serviert."
-[[params.highlights.cards]]
-  icon = "games"
-  title = "Attraktionen & Unterhaltung"
-  text = "Schiessbude, Kegelbahn und Glücksrad sorgen für ein kleines Vergnügen am Rande."
 
 
 # ── Location Section ──
