@@ -1,23 +1,25 @@
 baseURL = "https://alpenrosenfest.ch/"
 languageCode = "de-CH"
 defaultContentLanguage = "de"
-title = "Alpenrosenfest"
+copyright = "© Janick Lehmann"
+title = "Alpenrosenfest Schneisingen"
 theme = "alpenrosenfest-theme"
+disableKinds = ["taxonomy", "term", "rss"]
+enableRobotsTXT = true
+
+[sitemap]
+  changefreq = "weekly"
+  priority = -1
+
 
 # ═══════════════════════════════════════
 # SITE PARAMETERS
 # ═══════════════════════════════════════
-
 [params]
   description = "Ein Kulturfest rund um die Alpenrosen in Schneisingen."
   date = 2026-06-07
-  footerTagline = "Design by Janick Lehmann."
-
-# ── Notification Banner ──
-# Set enabled = true to show a banner at the top of the site.
-[params.banner]
-  enabled = false
-  message = ""
+  image = "images/alpenrosen-01.jpg"
+  footerTagline = "Build with ❤️"
 
 
 # ── Colors ──
@@ -25,6 +27,13 @@ theme = "alpenrosenfest-theme"
   accent = "#D96A7A"
   secondary = "#5F7A4B"
   background = "#F0E3C5"
+
+
+# ── Notification Banner ──
+# Set enabled = true to show a banner at the top of the site.
+[params.banner]
+  enabled = false
+  message = ""
 
 
 # ── Navigation ──
