@@ -81,7 +81,7 @@ enableRobotsTXT = true
 # ── About Section ──
 [params.about]
   label = "Willkommen"
-  title = "Über das Fest"
+  title = "Das Fest"
 
 [[params.about.cards]]
   icon = "flower"
@@ -102,8 +102,8 @@ enableRobotsTXT = true
   title = "Rostblaettrige Alpenrose"
   commonName = "Rhododendron ferrugineum"
   description = [
-    "Die Rostblättrige Alpenrose ist ein immergrüner Strauch aus der Familie der Heidekrautgewächse. Ihren Namen verdankt sie den rostbraunen Drüsenschuppen auf der Blattunterseite.",
-    "Normalerweise kommt sie in Höhenlagen zwischen 1.500 und 2.800 Metern in den Alpen vor. Umso bemerkenswerter ist es, dass sie an diesem Standort - weit ausserhalb ihres natürlichen Verbreitungsgebiets - als Eiszeitrelikt überlebt hat."
+    "Die Rostblättrige Alpenrose ist ein immergrüner Zwergstrauch aus der Familie der Heidekrautgewächse. Ihren Namen verdankt sie den rostroten Drüsenschuppen auf der Blattunterseite von älteren Blättern. Sie wächst bevorzugt auf kalkarmen, sauren Böden",
+    "Die Sage erzählt, dass die Samen der Alpenrosen einst aus den Rucksäcken zweier Geschwister fielen, die aus dem Kanton Glarus/Nidwalden vor den Franzosen flüchteten. Die wahrscheinlichste Erklärung für das Vorkommen ist jedoch, dass der Linth-Gletscher die Alpenrosen während der Eiszeit ins Studenland verfrachtet hat."
   ]
 
 [[params.plant.facts]]
