@@ -13,6 +13,12 @@ theme = "alpenrosenfest-theme"
   date = 2026-06-07
   footerTagline = "Design by Janick Lehmann."
 
+# ── Notification Banner ──
+# Set enabled = true to show a banner at the top of the site.
+[params.banner]
+  enabled = false
+  message = ""
+
 
 # ── Colors ──
 [params.colors]
@@ -24,7 +30,7 @@ theme = "alpenrosenfest-theme"
 # ── Navigation ──
 # Each entry: label (display text), href (anchor link), cta (optional, highlight as button)
 [[params.nav]]
-  label = "Über das Fest"
+  label = "Das Fest"
   href = "#ueber"
 [[params.nav]]
   label = "Die Alpenrosen"
@@ -36,7 +42,7 @@ theme = "alpenrosenfest-theme"
   label = "Anfahrt"
   href = "#anfahrt"
 [[params.nav]]
-  label = "Sponsoren"
+  label = "Unterstützer"
   href = "#sponsoren"
 
 
@@ -71,15 +77,15 @@ theme = "alpenrosenfest-theme"
 [[params.about.cards]]
   icon = "flower"
   title = "Botanische Rarität"
-  text = "Wir feiern das einzige natürliche Vorkommen der Rostblättrigen Alpenrose (<em>Rhododendron ferrugineum</em>) ausserhalb der Alpen - ein Relikt der letzten Eiszeit, das an diesem besonderen Standort bis heute überlebt hat."
+  text = "Gefeiert wird das einzige wilde Vorkommen der Alpenrosen ausserhalb der Alpen. Das seit über 100 Jahren durchgeführte Fest ist eine Würdigung dieser botanischen Besonderheit."
 [[params.about.cards]]
   icon = "house"
   title = "Fest im Wald"
-  text = "Umgeben von Natur findet das Alpenrosenfest mitten im Wald statt. Der besondere Standort der Pflanze wird so zum Festplatz - Natur und Kultur verschmelzen zu einem einzigartigen Erlebnis."
+  text = "Der besondere Standort der Pflanzen wird bei schönem Wetter zum Festplatz. Lässt das Wetter es nicht zu, findet das Fest in der Mehrzweckhalle statt."
 [[params.about.cards]]
   icon = "sun"
-  title = "Für alle Generationen"
-  text = "Von fachkundigen Führungen über kulinarische Genüsse bis hin zu Spielen für die ganze Familie - das Alpenrosenfest bietet ein vielfältiges Programm, das Gross und Klein begeistert."
+  title = "Etwas für alle"
+  text = "Das Programm bietet für alle etwas. Egal ob der Tag gemütlich im Wald verbracht wird oder die verschiedenen Attraktionen ausprobiert werden. Vorbeischauen lohnt sich auf jeden Fall!"
 
 # ── Plant Section ──
 [params.plant]
@@ -92,41 +98,11 @@ theme = "alpenrosenfest-theme"
   ]
 
 [[params.plant.facts]]
-  value = "Juni - Juli"
-  label = "Blütezeit"
+  value = "Mai - Juli"
+  label = "Blühmonate"
 [[params.plant.facts]]
   value = "20 - 100 cm"
   label = "Wuchshöhe"
-[[params.plant.facts]]
-  value = "Geschützt"
-  label = "Schutzstatus"
-
-
-# ── schedule Section ──
-[params.schedule]
-  title = "Programm"
-  subtitle = "Ein Tag voller Natur, Kultur und Genuss im Wald"
-
-[[params.schedule.days]]
-  tabLabel = "Samstag"
-  id = "tag1"
-
-  [[params.schedule.days.events]]
-    time = "10:30"
-    title = "Ökumenischer Gottesdienst"
-    text = "Eröffnung des Alpenrosenfests mit einem ökumenischen Gottesdienst, musikalisch begleitet durch die Spielgemeinschaft Ehrendingen-Schneisingen."
-  [[params.schedule.days.events]]
-    time = "ab 11:30"
-    title = "Öffnung Festwirtschaft und Attraktionen"
-    text = "Betriebsbeginn der Festwirtschaft und der verschiedenen Attraktionen."
-  [[params.schedule.days.events]]
-    time = "11:30"
-    title = "Grenzenlos Böhmische"
-    text = "Regionale Spezialitäten und Getränke an der Waldschänke"
-  [[params.schedule.days.events]]
-    time = "17:00"
-    title = "Abschluss"
-    text = "Verabschiedung aller Gäste und Ausklang des Festes"
 
 
 # ── Highlights Section ──
@@ -140,12 +116,45 @@ theme = "alpenrosenfest-theme"
   text = "Musikalische Darbietungen von verschiedenen Gruppen sorgen für eine festliche Stimmung."
 [[params.highlights.cards]]
   icon = "catering"
-  title = "Festwirtschaft"
-  text = "Geniessen Sie frisch zubereitete Spezialitäten aus der Region - direkt im Wald serviert."
+  title = "Festwirtschaft & Bar"
+  text = "Die Festwirtschaft im Wald und eine gemütliche Bar laden zum Verweilen ein."
 [[params.highlights.cards]]
   icon = "games"
   title = "Attraktionen & Unterhaltung"
   text = "Schiessbude, Kegelbahn und Glücksrad sorgen für ein kleines Vergnügen am Rande."
+
+
+# ── schedule Section ──
+[params.schedule]
+  title = "Provisorisches Programm"
+  subtitle = "Das Programm befindet sich noch in Planung und wird laufend aktualisiert."
+
+[[params.schedule.days]]
+  tabLabel = "Samstag"
+  id = "tag1"
+
+  [[params.schedule.days.events]]
+    time = "10:30"
+    title = "Ökumenischer Gottesdienst"
+    text = "Eröffnung des Alpenrosenfests mit einem ökumenischen Gottesdienst, musikalisch begleitet durch die Spielgemeinschaft Ehrendingen-Schneisingen."
+  [[params.schedule.days.events]]
+    time = "11:30"
+    title = "Öffnung Festwirtschaft und Attraktionen"
+    text = "Betriebsbeginn der Festwirtschaft, Bar und der verschiedenen Attraktionen."
+  [[params.schedule.days.events]]
+    time = "12:00"
+    title = "Grenzenlos Böhmische"
+    text = "Grenzenlos Böhmische ist eine junge Blasmusikgruppe aus Vorarlberg, gegründet im Jahr 2021. Sie besteht aus sieben leidenschaftlichen Musikanten, die in kleiner Besetzung böhmisch-mährische Blasmusik spielen."
+    image = "https://grenzenlos-boehmische.at/images/Logo%20Neu%202025%20fu%CC%88r%20Homepage%20oben.png"
+    imageLink = "https://grenzenlos-boehmische.at/"
+  [[params.schedule.days.events]]
+    time = "noch offen"
+    title = "Weitere Programmpunkte"
+    text = "Wir arbeiten daran, das Programm mit zusammenzustellen und werden es laufend aktualisieren."
+  [[params.schedule.days.events]]
+    time = "17:00"
+    title = "Abschluss"
+    text = "Verabschiedung aller Gäste und Ausklang des Festes"
 
 
 # ── Location Section ──
@@ -161,18 +170,18 @@ theme = "alpenrosenfest-theme"
   icon = "pin"
   title = "Veranstaltungsort"
   text = "Im Schneisinger Bowald in der Waldlichtung bei den Alpenrosen."
+  [[params.location.details]]
+  icon = "parking"
+  title = "Parkplätze"
+  text = "In der Nähe des Festplatzes stehen Parkmöglichkeiten zur Verfügung. Die Feuerwehr Schneisingen weist die Fahrzeuge ein."
 [[params.location.details]]
   icon = "directions"
-  title = "Anreise"
-  text = "Am besten mit dem öffentlichen Verkehr: Postauto Linie 354 bis Haltestelle 'Schneisingen, Oberdorf'. Von dort ca. 20 Minuten Fussweg zum Festplatz."
+  title = "Öffentlicher Verkehr"
+  text = "PostAuto Linie 354 bis 'Schneisingen, Oberdorf', dann ca. 20 Minuten Fussweg zum Festplatz oder PostAuto Linie 354 bis 'Schneisingen, Mitteldorf', dann Shuttle vom Schulhaus zum Festplatz."
 [[params.location.details]]
   icon = "shuttle"
   title = "Shuttle-Service"
-  text = "Vom Schulhaus Aemmert wird ein Shuttle-Service angeboten. Der Shuttle verkehrt von 10:00 bis 15:30 Uhr im 30-Minuten-Takt."
-[[params.location.details]]
-  icon = "parking"
-  title = "Parkplätze"
-  text = "Bei der Wasserversorgung und am Waldweg stehen eine begrenzte Anzahl an Parkplätzen zur Verfügung. Die letzten Meter müssen zu Fuss zurückgelegt werden."
+  text = "Vom Schulhaus Aemmert wird ein Shuttle-Service angeboten. Der Shuttle verkehrt von 10:00 bis 16:30 Uhr."
 
 
 # ── Sponsors Section ──
@@ -180,11 +189,13 @@ theme = "alpenrosenfest-theme"
   label = "Unsere Unterstützer"
   title = "Sponsoren"
 
-[[params.sponsors.items]]
-  name = "Kuratle Jaecker"
-  logo = "images/sponsors/kuratle-jaecker.png"
-  contribution = "Hauptsponsor"
-[[params.sponsors.items]]
-  name = "Kreisel Garage"
-  logo = "images/sponsors/kreisel-garage.png"
-  contribution = "Shuttle Bus"
+# [[params.sponsors.items]]
+#   name = "Kuratle Jaecker"
+#   logo = "images/sponsors/kuratle-jaecker.png"
+#   contribution = "Hauptsponsor"
+#   url = "https://kuratle-jaecker.ch/"
+# [[params.sponsors.items]]
+#   name = "Kreisel Garage"
+#   logo = "images/sponsors/kreisel-garage.png"
+#   contribution = "Shuttle Bus"
+#   url = "https://www.kreisel-garage.ch/"
