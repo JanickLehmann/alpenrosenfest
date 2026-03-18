@@ -7,10 +7,6 @@ theme = "alpenrosenfest-theme"
 disableKinds = ["taxonomy", "term", "rss"]
 enableRobotsTXT = true
 
-[sitemap]
-  changefreq = "weekly"
-  priority = -1
-
 
 # ═══════════════════════════════════════
 # SITE PARAMETERS
@@ -20,6 +16,15 @@ enableRobotsTXT = true
   date = 2026-06-07
   image = "images/alpenrosen-01.jpg"
   footerTagline = "Build with ❤️"
+
+
+# ── Social Links ──
+# Each entry: name (display label), icon (SVG icon key), url (link target)
+# Available icons: instagram, facebook, tiktok, youtube, x, linkedin, email, website
+[[params.social]]
+  name = "Instagram"
+  icon = "instagram"
+  url = "https://instagram.com/alpenrosenfest"
 
 
 # ── Colors ──
@@ -179,18 +184,18 @@ enableRobotsTXT = true
   icon = "pin"
   title = "Veranstaltungsort"
   text = "Im Schneisinger Bowald in der Waldlichtung bei den Alpenrosen."
-  [[params.location.details]]
-  icon = "parking"
-  title = "Parkplätze"
-  text = "In der Nähe des Festplatzes stehen Parkmöglichkeiten zur Verfügung. Die Feuerwehr Schneisingen weist die Fahrzeuge ein."
+[[params.location.details]]
+  icon = "shuttle"
+  title = "Shuttle-Service"
+  text = "Vom Schulhaus Aemmert wird ein Shuttle-Service angeboten. Der Shuttle verkehrt von 10:00 bis 16:30 Uhr."
 [[params.location.details]]
   icon = "directions"
   title = "Öffentlicher Verkehr"
   text = "PostAuto Linie 354 bis 'Schneisingen, Oberdorf', dann ca. 20 Minuten Fussweg zum Festplatz oder PostAuto Linie 354 bis 'Schneisingen, Mitteldorf', dann Shuttle vom Schulhaus zum Festplatz."
 [[params.location.details]]
-  icon = "shuttle"
-  title = "Shuttle-Service"
-  text = "Vom Schulhaus Aemmert wird ein Shuttle-Service angeboten. Der Shuttle verkehrt von 10:00 bis 16:30 Uhr."
+  icon = "parking"
+  title = "Parkplätze"
+  text = "In der Nähe des Festplatzes stehen Parkmöglichkeiten zur Verfügung. Die Feuerwehr Schneisingen weist die Fahrzeuge ein."
 
 
 # ── Sponsors Section ──
