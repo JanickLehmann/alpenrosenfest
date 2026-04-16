@@ -15,7 +15,7 @@ enableRobotsTXT = true
   description = "Ein Kulturfest rund um die Alpenrosen in Schneisingen."
   date = 2026-06-07
   image = "images/alpenrosen-01.jpg"
-  footerTagline = "Build with ❤️"
+  footerTagline = "Built with ❤️"
 
 
 # ── Social Links ──
@@ -141,7 +141,7 @@ enableRobotsTXT = true
 # ── schedule Section ──
 [params.schedule]
   title = "Provisorisches Programm"
-  subtitle = "Das Programm befindet sich noch in Planung und wird laufend aktualisiert."
+  subtitle = "Das Programm befindet sich noch in Planung und wird laufend aktualisiert. Bei schlechtem Wetter findet das Programm in der Turnhalle Aemmert statt. Der Entscheid wird ein paar Tage vor dem Fest auf der Internetseite und auf Social Media bekannt gegeben."
 
 [[params.schedule.days]]
   tabLabel = "Samstag"
@@ -152,21 +152,21 @@ enableRobotsTXT = true
     title = "Ökumenischer Gottesdienst"
     text = "Eröffnung des Alpenrosenfests mit einem ökumenischen Gottesdienst, musikalisch begleitet durch die Spielgemeinschaft Ehrendingen-Schneisingen."
   [[params.schedule.days.events]]
-    time = "11:30"
+    time = "11:15"
     title = "Öffnung Festwirtschaft und Attraktionen"
     text = "Betriebsbeginn der Festwirtschaft, Bar und der verschiedenen Attraktionen."
   [[params.schedule.days.events]]
-    time = "12:00"
+    time = "ab 11:30"
+    title = "Musikalische Unterhaltung"
+    text = "Die Spielgemeinschaft Ehrendingen-Schneisingen, das Jugendensemble Schneisingen und die Bläserklasse Schneisingen bieten musikalische Unterhaltung."
+  [[params.schedule.days.events]]
+    time = "ab 12:30"
     title = "Grenzenlos Böhmische"
     text = "Grenzenlos Böhmische ist eine junge Blasmusikgruppe aus Vorarlberg, gegründet im Jahr 2021. Sie besteht aus sieben leidenschaftlichen Musikanten, die in kleiner Besetzung böhmisch-mährische Blasmusik spielen."
     image = "https://grenzenlos-boehmische.at/images/Logo%20Neu%202025%20fu%CC%88r%20Homepage%20oben.png"
     imageLink = "https://grenzenlos-boehmische.at/"
   [[params.schedule.days.events]]
-    time = "noch offen"
-    title = "Weitere Programmpunkte"
-    text = "Wir arbeiten daran, das Programm mit zusammenzustellen und werden es laufend aktualisieren."
-  [[params.schedule.days.events]]
-    time = "17:00"
+    time = "18:00"
     title = "Abschluss"
     text = "Verabschiedung aller Gäste und Ausklang des Festes"
 
@@ -203,13 +203,23 @@ enableRobotsTXT = true
   label = "Unsere Unterstützer"
   title = "Sponsoren"
 
-# [[params.sponsors.items]]
-#   name = "Kuratle Jaecker"
-#   logo = "images/sponsors/kuratle-jaecker.png"
-#   contribution = "Hauptsponsor"
-#   url = "https://kuratle-jaecker.ch/"
-# [[params.sponsors.items]]
-#   name = "Kreisel Garage"
-#   logo = "images/sponsors/kreisel-garage.png"
-#   contribution = "Shuttle Bus"
-#   url = "https://www.kreisel-garage.ch/"
+[[params.sponsors.items]]
+  name = "Kuratle & Jaecker AG"
+  logo = "images/sponsors/Kuratle_Jaecker_CMYK.png"
+  contribution = "Hauptsponsor"
+  url = "https://kuratle-jaecker.ch/"
+[[params.sponsors.items]]
+  name = "Kreisel Garage M. Calistri GmbH"
+  logo = "images/sponsors/Inserat_KreiselGarage_mit_Slogan.svg"
+  contribution = "Shuttle Bus"
+  url = "https://www.kreisel-garage.ch/"
+[[params.sponsors.items]]
+  name = "Josef Lehmann Holzbau AG"
+  logo = "images/sponsors/Josef Lehmann Holzbau AG Logo_dunkel.png"
+  contribution = ""
+  url = "https://www.lehmann-schneisingen.ch/"
+[[params.sponsors.items]]
+  name = "Meier-Laube AG"
+  logo = "images/sponsors/Logo_Bauunternehmung.jpg"
+  contribution = ""
+  url = "https://www.meier-laube.ch/"
