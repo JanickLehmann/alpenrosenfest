@@ -207,7 +207,7 @@ enableRobotsTXT = true
   name = "Kuratle & Jaecker AG"
   logo = "images/sponsors/Kuratle_Jaecker_CMYK.png"
   contribution = "Hauptsponsor"
-  url = "https://kuratle-jaecker.ch/"
+  url = "https://kuratlejaecker.ch/"
 [[params.sponsors.items]]
   name = "Kreisel Garage M. Calistri GmbH"
   logo = "images/sponsors/Inserat_KreiselGarage_mit_Slogan.svg"
