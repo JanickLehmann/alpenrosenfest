@@ -38,7 +38,7 @@ enableRobotsTXT = true
 # Set enabled = true to show a banner at the top of the site.
 [params.banner]
   enabled = false
-  message = ""
+  message = "Wegen des schlechten Wetters findet das Alpenrosenfest in der Turnhalle Aemmert statt!"
 
 
 # ── Navigation ──
@@ -135,7 +135,7 @@ enableRobotsTXT = true
 [[params.highlights.cards]]
   icon = "games"
   title = "Attraktionen & Unterhaltung"
-  text = "Schiessbude, Kegelbahn und Glücksrad sorgen für ein kleines Vergnügen am Rande."
+  text = "Schiessbude, Kegelbahn, Glücksrad und Ponyreiten sorgen für ein kleines Vergnügen am Rande."
 
 
 # ── schedule Section ──
@@ -150,7 +150,8 @@ enableRobotsTXT = true
   [[params.schedule.days.events]]
     time = "10:30"
     title = "Ökumenischer Gottesdienst"
-    text = "Eröffnung des Alpenrosenfests mit einem ökumenischen Gottesdienst, musikalisch begleitet durch die Spielgemeinschaft Ehrendingen-Schneisingen."
+    text = "Eröffnung des Alpenrosenfests mit einem ökumenischen Gottesdienst unter der Leitung von Bernhard Ollmert, musikalisch begleitet durch die Spielgemeinschaft Ehrendingen-Schneisingen."
+    image = "images/schedule/Logos_Kirchen_kombiniert.png"
   [[params.schedule.days.events]]
     time = "11:15"
     title = "Öffnung Festwirtschaft und Attraktionen"
@@ -163,7 +164,7 @@ enableRobotsTXT = true
     time = "ab 12:30"
     title = "Grenzenlos Böhmische"
     text = "Grenzenlos Böhmische ist eine junge Blasmusikgruppe aus Vorarlberg, gegründet im Jahr 2021. Sie besteht aus sieben leidenschaftlichen Musikanten, die in kleiner Besetzung böhmisch-mährische Blasmusik spielen."
-    image = "https://grenzenlos-boehmische.at/images/Logo%20Neu%202025%20fu%CC%88r%20Homepage%20oben.png"
+    image = "images/schedule/Logo Neu 2025 für Homepage oben.png"
     imageLink = "https://grenzenlos-boehmische.at/"
   [[params.schedule.days.events]]
     time = "18:00"
@@ -223,3 +224,13 @@ enableRobotsTXT = true
   logo = "images/sponsors/Logo_Bauunternehmung.jpg"
   contribution = ""
   url = "https://www.meier-laube.ch/"
+[[params.sponsors.items]]
+  name = "Schmäh Offset & Repro AG"
+  logo = "images/sponsors/Logo_Schmaeh_druck.svg"
+  contribution = ""
+  url = "https://www.schmaeh-druck.ch/"
+#[[params.sponsors.items]]
+#  name = "Kehlhof Garage AG"
+#  logo = "images/sponsors/placeholder.png"
+#  contribution = ""
+#  url = "https://kehlhofgarage.ch/"
