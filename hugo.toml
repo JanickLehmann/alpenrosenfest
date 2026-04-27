@@ -217,7 +217,7 @@ enableRobotsTXT = true
 [[params.sponsors.items]]
   name = "Josef Lehmann Holzbau AG"
   logo = "images/sponsors/Josef Lehmann Holzbau AG Logo_dunkel.png"
-  contribution = ""
+  contribution = "Material und Werbung"
   url = "https://www.lehmann-schneisingen.ch/"
 [[params.sponsors.items]]
   name = "Meier-Laube AG"
@@ -225,12 +225,17 @@ enableRobotsTXT = true
   contribution = ""
   url = "https://www.meier-laube.ch/"
 [[params.sponsors.items]]
+  name = "Gerhard Erni, Schneisingen"
+  logo = "images/sponsors/Gerhard-Erni-Logo.png"
+  contribution = "Musik"
+  url = ""
+[[params.sponsors.items]]
   name = "Schmäh Offset & Repro AG"
   logo = "images/sponsors/Logo_Schmaeh_druck.svg"
-  contribution = ""
+  contribution = "Drucksachen"
   url = "https://www.schmaeh-druck.ch/"
-#[[params.sponsors.items]]
-#  name = "Kehlhof Garage AG"
-#  logo = "images/sponsors/placeholder.png"
-#  contribution = ""
-#  url = "https://kehlhofgarage.ch/"
+[[params.sponsors.items]]
+  name = "Kehlhof Garage AG"
+  logo = "images/sponsors/Kehlhof mit Webseite.png"
+  contribution = "Ponyreiten"
+  url = "https://kehlhofgarage.ch/"
