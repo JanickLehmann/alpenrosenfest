@@ -236,6 +236,6 @@ enableRobotsTXT = true
   url = "https://www.schmaeh-druck.ch/"
 [[params.sponsors.items]]
   name = "Kehlhof Garage AG"
-  logo = "images/sponsors/Kehlhof mit Webseite.png"
+  logo = "images/sponsors/Kehlhof Garage AG Steinmaur.png"
   contribution = "Ponyreiten"
   url = "https://kehlhofgarage.ch/"
