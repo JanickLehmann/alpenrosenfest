@@ -140,7 +140,7 @@ enableRobotsTXT = true
 
 # ── schedule Section ──
 [params.schedule]
-  title = "Provisorisches Programm"
+  title = "Programm"
   subtitle = "Das Programm befindet sich noch in Planung und wird laufend aktualisiert. Bei schlechtem Wetter findet das Programm in der Turnhalle Aemmert statt. Der Entscheid wird ein paar Tage vor dem Fest auf der Internetseite und auf Social Media bekannt gegeben."
 
 [[params.schedule.days]]
@@ -155,7 +155,7 @@ enableRobotsTXT = true
   [[params.schedule.days.events]]
     time = "11:15"
     title = "Öffnung Festwirtschaft und Attraktionen"
-    text = "Betriebsbeginn der Festwirtschaft, Bar und der verschiedenen Attraktionen."
+    text = "Betriebsbeginn der Festwirtschaft, Bar und der verschiedenen Attraktionen. Die Schiessbude, Kegelbahn und das Ponyreiten laden zum Mitmachen ein."
   [[params.schedule.days.events]]
     time = "ab 11:30"
     title = "Musikalische Unterhaltung"
