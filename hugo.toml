@@ -34,6 +34,15 @@ enableRobotsTXT = true
   background = "#F0E3C5"
 
 
+# ── Coming Soon Mode ──
+# Set enabled = true to show a minimal "coming soon" page
+# instead of the full event site (e.g. between events).
+[params.comingSoon]
+  enabled = false
+  title = "Wir sind bald zurück"
+  message = "Das Alpenrosenfest hat bereits stattgefunden. Die Internetseite wird wieder aktualisiert, wenn die Planung für das nächste Mal startet. Folge uns auf Social Media für Updates!"
+
+
 # ── Notification Banner ──
 # Set enabled = true to show a banner at the top of the site.
 [params.banner]
