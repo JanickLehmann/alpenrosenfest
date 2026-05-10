@@ -2,13 +2,17 @@ name: Weather Banner
 
 on:
   schedule:
-    # Run every 6 hours in the week before and on the event day
     - cron: "0 20 * 5-6 *"
+      timezone: "Europe/Zurich"
   workflow_dispatch:
 
 permissions:
   contents: write
   pull-requests: write
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   check-weather:
@@ -16,55 +20,43 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6.0.2
-
       - name: Read event date
         id: event
         run: |
           EVENT_DATE=$(grep -E '^\s*date\s*=' hugo.toml | head -1 | sed 's/.*=\s*//' | tr -d ' "'\''')
           echo "date=$EVENT_DATE" >> "$GITHUB_OUTPUT"
           echo "Event date: $EVENT_DATE"
-
       - name: Check if within forecast window
         id: window
         run: |
           EVENT_DATE="${{ steps.event.outputs.date }}"
           TODAY=$(date -u +%Y-%m-%d)
-
-          # Open-Meteo provides up to 16-day forecasts
           DAYS_UNTIL=$(( ($(date -u -d "$EVENT_DATE" +%s) - $(date -u -d "$TODAY" +%s)) / 86400 ))
           echo "Days until event: $DAYS_UNTIL"
-
           if [[ $DAYS_UNTIL -ge 0 && $DAYS_UNTIL -le 3 ]]; then
             echo "in_window=true" >> "$GITHUB_OUTPUT"
           else
             echo "in_window=false" >> "$GITHUB_OUTPUT"
             echo "Event is $DAYS_UNTIL days away — outside forecast window, skipping."
           fi
-
       - name: Fetch weather forecast
         if: steps.window.outputs.in_window == 'true'
         id: weather
         run: |
           EVENT_DATE="${{ steps.event.outputs.date }}"
           RESPONSE=$(curl -sf "https://api.open-meteo.com/v1/forecast?latitude=47.5309981&longitude=8.3520494&daily=precipitation_probability_max&timezone=Europe/Zurich&start_date=${EVENT_DATE}&end_date=${EVENT_DATE}")
-
-          echo "API response: $RESPONSE"
-
           RAIN_CHANCE=$(echo "$RESPONSE" | jq '.daily.precipitation_probability_max[0]')
           echo "Max precipitation probability on $EVENT_DATE: ${RAIN_CHANCE}%"
           echo "rain_chance=$RAIN_CHANCE" >> "$GITHUB_OUTPUT"
-
           if [[ "$RAIN_CHANCE" -gt 60 ]]; then
             echo "rain=true" >> "$GITHUB_OUTPUT"
           else
             echo "rain=false" >> "$GITHUB_OUTPUT"
           fi
-
       - name: Check if banner is already enabled
         if: steps.window.outputs.in_window == 'true' && steps.weather.outputs.rain == 'true'
         id: status
         run: |
-          # Check current banner state in hugo.toml
           ENABLED=$(sed -n '/^\[params\.banner\]$/,/^[[:space:]]*enabled/ { s/.*enabled\s*=\s*//p; }' hugo.toml | tr -d ' ')
           echo "Banner currently enabled: $ENABLED"
           if [[ "$ENABLED" == "true" ]]; then
@@ -72,7 +64,6 @@ jobs:
           else
             echo "already_enabled=false" >> "$GITHUB_OUTPUT"
           fi
-
       - name: Check for existing PR
         if: steps.window.outputs.in_window == 'true' && steps.weather.outputs.rain == 'true' && steps.status.outputs.already_enabled == 'false'
         id: existing_pr
@@ -86,12 +77,10 @@ jobs:
           else
             echo "exists=false" >> "$GITHUB_OUTPUT"
           fi
-
       - name: Enable banner
         if: steps.window.outputs.in_window == 'true' && steps.weather.outputs.rain == 'true' && steps.status.outputs.already_enabled == 'false' && steps.existing_pr.outputs.exists == 'false'
         run: |
           sed -i '/^\[params\.banner\]$/,/^[[:space:]]*enabled/ s/enabled = false/enabled = true/' hugo.toml
-
       - name: Create Pull Request
         if: steps.window.outputs.in_window == 'true' && steps.weather.outputs.rain == 'true' && steps.status.outputs.already_enabled == 'false' && steps.existing_pr.outputs.exists == 'false'
         env:
@@ -100,15 +89,12 @@ jobs:
           RAIN_CHANCE="${{ steps.weather.outputs.rain_chance }}"
           EVENT_DATE="${{ steps.event.outputs.date }}"
           BRANCH="weather/enable-banner"
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           git checkout -b "$BRANCH"
           git add hugo.toml
           git commit -m "chore: enable banner (${RAIN_CHANCE}% chance of rain)"
           git push -f origin "$BRANCH"
-
           gh pr create \
             --title "🌧️ Schlechtwetterinfo aktivieren (${RAIN_CHANCE}% Regenwahrscheinlichkeit)" \
             --body "Die Wettervorhersage für Schneisingen am **${EVENT_DATE}** zeigt eine Regenwahrscheinlichkeit von **${RAIN_CHANCE}%**.
