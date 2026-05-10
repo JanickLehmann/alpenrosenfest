@@ -3,10 +3,15 @@ name: Enable Coming Soon Page
 on:
   schedule:
     - cron: "0 2 * 5-6 *"
+      timezone: "Europe/Zurich"
   workflow_dispatch:
 
 permissions:
   contents: write
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   enable-coming-soon:
@@ -14,30 +19,23 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6.0.2
-
       - name: Read event date and check if coming soon should be enabled
         id: check
         run: |
-          # Extract the event date from hugo.toml
           EVENT_DATE=$(grep -E '^\s*date\s*=' hugo.toml | head -1 | sed 's/.*=\s*//' | tr -d ' "'\''')
           echo "Event date: $EVENT_DATE"
-
-          # Calculate the day after the event
-          ENABLE_DATE=$(date -u -d "$EVENT_DATE + 1 day" +%Y-%m-%d)
-          TODAY=$(date -u +%Y-%m-%d)
-          echo "Enable date: $ENABLE_DATE"
-          echo "Today: $TODAY"
-
-          if [[ "$TODAY" >= "$ENABLE_DATE" ]]; then
+          ENABLE_DATE=$(date -u -d "$EVENT_DATE + 1 day" +%s)
+          TODAY=$(date -u +%s)
+          echo "Enable date: $(date -u -d "@$ENABLE_DATE" +%Y-%m-%d)"
+          echo "Today: $(date -u -d "@$TODAY" +%Y-%m-%d)"
+          if [[ "$TODAY" -ge "$ENABLE_DATE" ]]; then
             echo "should_enable=true" >> "$GITHUB_OUTPUT"
           else
             echo "should_enable=false" >> "$GITHUB_OUTPUT"
           fi
-
       - name: Enable coming soon mode
         if: steps.check.outputs.should_enable == 'true'
         run: sed -i '/^\[params\.comingSoon\]$/,/^[[:space:]]*enabled/ s/enabled = false/enabled = true/' hugo.toml
-
       - name: Check for changes
         if: steps.check.outputs.should_enable == 'true'
         id: diff
@@ -47,7 +45,6 @@ jobs:
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
-
       - name: Commit and push
         if: steps.diff.outputs.changed == 'true'
         run: |
