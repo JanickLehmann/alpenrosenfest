@@ -9,6 +9,14 @@ enableRobotsTXT = true
 
 
 # ═══════════════════════════════════════
+# CACHE CONFIGURATION
+# ═══════════════════════════════════════
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+
+# ═══════════════════════════════════════
 # SITE PARAMETERS
 # ═══════════════════════════════════════
 [params]
