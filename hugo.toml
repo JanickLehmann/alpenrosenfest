@@ -75,6 +75,9 @@ enableRobotsTXT = true
 [[params.nav]]
   label = "Unterstützer"
   href = "#sponsoren"
+[[params.nav]]
+  label = "OK"
+  href = "#ok"
 
 
 # ── Hero Section ──
@@ -189,6 +192,17 @@ enableRobotsTXT = true
     text = "Verabschiedung aller Gäste und Ausklang des Festes"
 
 
+# ── Organizer Section ──
+[params.organizer]
+  label = "Der Gastgeber"
+  title = "Organisationskomitee"
+  image = "images/ok-alpenrosenfest.jpg"
+  text = [
+    "Hinter dem Alpenrosenfest steht ein engagiertes Organisationskomitee aus Schneisingen. Mit viel Herzblut und Freiwilligenarbeit sorgt das OK dafür, dass das traditionelle Fest jedes Mal zu einem unvergesslichen Erlebnis wird.",
+    "Von der Planung des Programms über den Aufbau im Wald bis hin zur Festwirtschaft, das gesamte Team arbeitet Hand in Hand, um Besucherinnen und Besuchern einen wunderbaren Tag zu bereiten."
+  ]
+
+
 # ── Location Section ──
 [params.location]
   label = "So findest du zu uns"
@@ -205,7 +219,7 @@ enableRobotsTXT = true
 [[params.location.details]]
   icon = "shuttle"
   title = "Shuttle-Service"
-  text = "Vom Schulhaus Aemmert wird ein Shuttle-Service angeboten. Der Shuttle verkehrt von 10:00 bis 16:30 Uhr."
+  text = "Vom Schulhaus Aemmert wird ein Shuttle-Service angeboten. Der Shuttle verkehrt von 09:45 bis 16:00 Uhr."
 [[params.location.details]]
   icon = "directions"
   title = "Öffentlicher Verkehr"
