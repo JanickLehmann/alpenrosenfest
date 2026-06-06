@@ -270,3 +270,8 @@ enableRobotsTXT = true
   logo = "images/sponsors/Kehlhof Garage AG Steinmaur.png"
   contribution = "Ponyreiten"
   url = "https://kehlhofgarage.ch/"
+[[params.sponsors.items]]
+  name = "Killer Forst AG"
+  logo = "images/sponsors/KillerForstAG_CMYK.svg"
+  contribution = "Holzschnitzel"
+  url = "https://killerforstag.ch/"
