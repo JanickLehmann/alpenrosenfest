@@ -78,6 +78,9 @@ enableRobotsTXT = true
 [[params.nav]]
   label = "OK"
   href = "#ok"
+[[params.nav]]
+  label = "Galerie"
+  href = "galerie/"
 
 
 # ── Hero Section ──
@@ -275,3 +278,11 @@ enableRobotsTXT = true
   logo = "images/sponsors/KillerForstAG_CMYK.svg"
   contribution = "Holzschnitzel"
   url = "https://killerforstag.ch/"
+
+
+# ── Gallery Section ──
+# Add event photos into assets/images/gallery/ and they are shown automatically.
+[params.gallery]
+  label = "Rückblick"
+  title = "Impressionen"
+  subtitle = "Ein paar Eindrücke vom Alpenrosenfest. Zum Vergrössern einfach auf ein Bild klicken."
