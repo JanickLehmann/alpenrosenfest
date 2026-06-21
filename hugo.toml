@@ -20,8 +20,8 @@ enableRobotsTXT = true
 # SITE PARAMETERS
 # ═══════════════════════════════════════
 [params]
-  description = "Ein Kulturfest rund um die Alpenrosen in Schneisingen."
-  date = 2026-06-07
+  description = "Wir danken allen Besucherinnen und Besuchern für das zahlreiche Erscheinen am Alpenrosenfest 2026. In der Galerie sind einige Impressionen vom Fest zu finden."
+  date = "Vorbei, wir sehen uns 2027 wieder!"
   image = "images/alpenrosen-01.jpg"
   footerTagline = "Built with ❤️"
 
@@ -88,8 +88,8 @@ enableRobotsTXT = true
   title = "Alpenrosenfest"
   primaryButtonText = "Programm entdecken"
   primaryButtonHref = "#programm"
-  secondaryButtonText = "Anfahrt & Ort"
-  secondaryButtonHref = "#anfahrt"
+  secondaryButtonText = "Galerie ansehen"
+  secondaryButtonHref = "/galerie/"
   scrollHint = "Mehr erfahren"
   # Carousel interval in milliseconds (0 = no auto-advance)
   carouselInterval = 5000
